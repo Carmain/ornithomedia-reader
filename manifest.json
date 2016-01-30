@@ -4,5 +4,9 @@
   "name": "Ornithomedia reader",
   "description": "Change the way to display the articles in ornithomedia",
   "version": "1.0",
-  "author": "Martin Billard"
+  "author": "Martin Billard",
+
+  "browser_action": {
+    "default_icon": "icons/icon.png"
+  }
 }
