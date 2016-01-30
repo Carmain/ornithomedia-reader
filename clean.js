@@ -1,17 +1,23 @@
-var elements = new Array();
-
-// All the elements we want to remove
-elements["right_panel"] = document.getElementById("colonneDroite");
-//elements["translate_toolbar"] = document.getElementById("reseaux_sociaux_toolbar");
-elements["menu"] = document.getElementById("menu");
-elements["header"] = document.getElementById("bandeau");
-elements["social_toolbar"] = document.getElementById("reseaux_sociaux_toolbar_bas");
-elements["comments"] = document.getElementById("commentaire");
-elements["donations"] = document.getElementById("forums_don_toolbar");
-elements["fisrt_footer"] = document.getElementById("bas");
-elements["second_footer"] = document.getElementById("piedpage");
+var elements = {
+  "right_panel": "#colonneDroite",
+  "translate_toolbar": ".reseaux_sociaux_toolbar",
+  "menu": "#menu",
+  "header": "#bandeau",
+  "social_toolbar": "#reseaux_sociaux_toolbar_bas",
+  "comments": "#commentaire",
+  "donations": "#forums_don_toolbar",
+  "fisrt_footer": "#bas",
+  "second_footer": "#piedpage"
+};
 
 for (var keys in elements) {
-  console.log(elements[keys]);
-  elements[keys].parentNode.removeChild(elements[keys]);
+  var html_element = document.querySelector(elements[keys]);
+  console.log(html_element);
+  html_element.parentNode.removeChild(html_element);
 }
+
+/*var column = document.getElementById("colonne");
+var content = document.getElementsByClassName("fiche");
+
+column.style.removeProperty('width');
+content[0].style.removeProperty('width');*/
