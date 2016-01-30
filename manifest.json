@@ -3,7 +3,7 @@
 
   "name": "Ornithomedia reader",
   "description": "Change the way to display the articles in ornithomedia",
-  "version": "1.0",
+  "version": "0.1",
   "author": "Martin Billard",
 
   "permissions": [
@@ -13,7 +13,8 @@
   "content_scripts": [
     {
       "matches": ["http://www.ornithomedia.com/*/*/*.html"],
-      "js": ["clean.js"]
+      "js": ["clean.js"],
+      "run_at": "document_end"
     }
   ],
 
