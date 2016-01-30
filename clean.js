@@ -1,7 +1,11 @@
-var elements = {
+// All the items we want to hide
+var items_to_delete = {
   "right_panel": "#colonneDroite",
   "translate_toolbar": ".reseaux_sociaux_toolbar",
   "menu": "#menu",
+  "return": "#retour",
+  "breadcrumb": "#ariane",
+  "article_type": ".rubrique",
   "header": "#bandeau",
   "social_toolbar": "#reseaux_sociaux_toolbar_bas",
   "comments": "#commentaire",
@@ -16,8 +20,10 @@ for (var keys in elements) {
   html_element.parentNode.removeChild(html_element);
 }
 
-/*var column = document.getElementById("colonne");
-var content = document.getElementsByClassName("fiche");
+for (var keys in items_to_delete) {
+  var html_element = document.querySelector(items_to_delete[keys]);
+  html_element.parentNode.removeChild(html_element);
+}
 
 column.style.removeProperty('width');
 content[0].style.removeProperty('width');*/
