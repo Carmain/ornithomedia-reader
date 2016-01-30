@@ -14,10 +14,10 @@ var items_to_delete = {
   "second_footer": "#piedpage"
 };
 
-for (var keys in elements) {
-  var html_element = document.querySelector(elements[keys]);
-  console.log(html_element);
-  html_element.parentNode.removeChild(html_element);
+// All the items we want to resize
+var items_to_resize = {
+  "column": "#colonne",
+  "content": ".fiche"
 }
 
 for (var keys in items_to_delete) {
@@ -25,5 +25,8 @@ for (var keys in items_to_delete) {
   html_element.parentNode.removeChild(html_element);
 }
 
-column.style.removeProperty('width');
-content[0].style.removeProperty('width');*/
+for (var keys in items_to_resize) {
+  var html_element = document.querySelector(items_to_resize[keys]);
+  html_element.style.width = "100%";
+  html_element.style.fontSize = "13px";
+}
