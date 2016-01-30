@@ -1,0 +1,8 @@
+{
+  "manifest_version": 2,
+
+  "name": "Ornithomedia reader",
+  "description": "Change the way to display the articles in ornithomedia",
+  "version": "1.0",
+  "author": "Martin Billard"
+}
