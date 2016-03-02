@@ -18,7 +18,7 @@ var items_to_delete = {
 var items_to_resize = {
   "column": "#colonne",
   "content": ".fiche"
-}
+};
 
 for (var keys in items_to_delete) {
   var html_element = document.querySelector(items_to_delete[keys]);
