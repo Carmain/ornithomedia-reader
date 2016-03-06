@@ -1,3 +1,7 @@
+chrome.storage.sync.get("value", function(data) {
+  alert("data : " + data);
+});
+
 // All the items we want to hide
 var items_to_delete = {
   "right_panel": "#colonneDroite",
