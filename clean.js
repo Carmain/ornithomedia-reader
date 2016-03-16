@@ -1,7 +1,3 @@
-chrome.storage.sync.get("value", function(data) {
-  alert("data : " + data);
-});
-
 // All the items we want to hide
 var items_to_delete = {
   "right_panel": "#colonneDroite",
@@ -14,7 +10,7 @@ var items_to_delete = {
   "social_toolbar": "#reseaux_sociaux_toolbar_bas",
   "comments": "#commentaire",
   "donations": "#forums_don_toolbar",
-  "fisrt_footer": "#bas",
+  "first_footer": "#bas",
   "second_footer": "#piedpage"
 };
 
@@ -24,13 +20,21 @@ var items_to_resize = {
   "content": ".fiche"
 };
 
-for (var keys in items_to_delete) {
-  var html_element = document.querySelector(items_to_delete[keys]);
-  html_element.parentNode.removeChild(html_element);
+for (var key in items_to_delete) {
+  chrome.storage.sync.get(key, function(data) {
+    console.log(data, data[key]);
+    if(data[key]) {
+      var html_element = document.querySelector(items_to_delete[key]);
+      html_element.parentNode.removeChild(html_element);
+    }
+  });
+
+  // var html_element = document.querySelector(items_to_delete[key]);
+  // html_element.parentNode.removeChild(html_element);
 }
 
-for (var keys in items_to_resize) {
-  var html_element = document.querySelector(items_to_resize[keys]);
+for (var key in items_to_resize) {
+  var html_element = document.querySelector(items_to_resize[key]);
   html_element.style.width = "100%";
   html_element.style.fontSize = "13px";
 }
