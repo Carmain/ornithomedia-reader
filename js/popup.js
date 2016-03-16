@@ -1,10 +1,22 @@
-(function checkTheBoxes() {
+(function init() {
+
   var itemsForm = document.querySelectorAll(".config");
+  var form = document.getElementById('configuration_form');
+
+  form.onsubmit = function() {
+    var config = {};
+
+    for(var i = 0; i < itemsForm.length; i++) {
+      config[itemsForm[i].id] = itemsForm[i].checked;
+    }
+
+    chrome.storage.sync.set(config);
+  };
+
 
   function checkItem(data) {
-      console.log(data, data[key]); // TODO : Remove this
-      var key = Object.keys(data)[0];
-      document.getElementById(key).checked = data[key];
+    var key = Object.keys(data)[0];
+    document.getElementById(key).checked = data[key];
   }
 
   for(var i = 0; i < itemsForm.length; i++) {
