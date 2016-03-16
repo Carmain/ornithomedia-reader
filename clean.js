@@ -20,17 +20,17 @@ var items_to_resize = {
   "content": ".fiche"
 };
 
-for (var key in items_to_delete) {
-  chrome.storage.sync.get(key, function(data) {
-    console.log(data, data[key]);
-    if(data[key]) {
-      var html_element = document.querySelector(items_to_delete[key]);
-      html_element.parentNode.removeChild(html_element);
-    }
-  });
+var erase = function(data) {
+  var key = Object.keys(data)[0];
+  console.log(data, data[key]);
+  if(data[key]) {
+    var html_element = document.querySelector(items_to_delete[key]);
+    html_element.parentNode.removeChild(html_element);
+  }
+};
 
-  // var html_element = document.querySelector(items_to_delete[key]);
-  // html_element.parentNode.removeChild(html_element);
+for (var key in items_to_delete) {
+  chrome.storage.sync.get(key, erase);
 }
 
 for (var key in items_to_resize) {
