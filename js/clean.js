@@ -1,6 +1,7 @@
 // All the items we want to hide
 var items_to_delete = {
   "right_panel": "#colonneDroite",
+  "nav_bar": "nav",
   "translate_toolbar": ".reseaux_sociaux_toolbar",
   "menu": "#menu",
   "return": "#retour",
