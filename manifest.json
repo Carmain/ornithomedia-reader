@@ -11,13 +11,13 @@
   ],
 
   "background": {
-    "scripts": ["background.js"]
+    "scripts": ["js/background.js"]
   },
 
   "content_scripts": [
     {
       "matches": ["http://www.ornithomedia.com/*/*/*.html"],
-      "js": ["clean.js"],
+      "js": ["js/clean.js"],
       "run_at": "document_end"
     }
   ],
