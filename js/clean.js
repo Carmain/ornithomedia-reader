@@ -22,7 +22,7 @@ var items_to_resize = {
 
 var erase = function(data) {
   var key = Object.keys(data)[0];
-  console.log(data, data[key]);
+  console.log(data, data[key]); // TODO : Remove this
   if(data[key]) {
     var html_element = document.querySelector(items_to_delete[key]);
     html_element.parentNode.removeChild(html_element);
