@@ -1,5 +1,5 @@
 // All the items we want to hide
-var items_to_delete = {
+var itemsToDelete = {
   "right_panel": "#colonneDroite",
   "nav_bar": "nav",
   "translate_toolbar": ".reseaux_sociaux_toolbar",
@@ -16,28 +16,27 @@ var items_to_delete = {
 };
 
 // All the items we want to resize
-var items_to_resize = {
+var itemsToResize = {
   "column": "#colonne",
   "content": ".fiche"
 };
 
 var erase = function(data) {
   var key = Object.keys(data)[0];
-  console.log(data, data[key], key); // TODO : Remove this
   if(data[key]) {
-    var html_element = document.querySelector(items_to_delete[key]);
-    html_element.parentNode.removeChild(html_element);
+    var htmlElement = document.querySelector(itemsToDelete[key]);
+    htmlElement.parentNode.removeChild(htmlElement);
 
     if(key === "right_panel") {
-      for (var item in items_to_resize) {
-        var item_to_resize = document.querySelector(items_to_resize[item]);
-        item_to_resize.style.width = "100%";
-        item_to_resize.style.fontSize = "13px";
+      for (var item in itemsToResize) {
+        var itemToResize = document.querySelector(itemsToResize[item]);
+        itemToResize.style.width = "100%";
+        itemToResize.style.fontSize = "13px";
       }
     }
   }
 };
 
-for (var key in items_to_delete) {
+for (var key in itemsToDelete) {
   chrome.storage.sync.get(key, erase);
 }

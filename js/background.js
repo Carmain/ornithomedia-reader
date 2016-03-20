@@ -1,5 +1,4 @@
 chrome.runtime.onInstalled.addListener(function() {
-  // alert("Initialize !");
   chrome.storage.sync.set({
     'right_panel': true,
     'nav_bar': false,
