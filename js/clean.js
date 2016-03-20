@@ -23,19 +23,21 @@ var items_to_resize = {
 
 var erase = function(data) {
   var key = Object.keys(data)[0];
-  console.log(data, data[key]); // TODO : Remove this
+  console.log(data, data[key], key); // TODO : Remove this
   if(data[key]) {
     var html_element = document.querySelector(items_to_delete[key]);
     html_element.parentNode.removeChild(html_element);
+
+    if(key === "right_panel") {
+      for (var item in items_to_resize) {
+        var item_to_resize = document.querySelector(items_to_resize[item]);
+        item_to_resize.style.width = "100%";
+        item_to_resize.style.fontSize = "13px";
+      }
+    }
   }
 };
 
 for (var key in items_to_delete) {
   chrome.storage.sync.get(key, erase);
-}
-
-for (var key in items_to_resize) {
-  var html_element = document.querySelector(items_to_resize[key]);
-  html_element.style.width = "100%";
-  html_element.style.fontSize = "13px";
 }
