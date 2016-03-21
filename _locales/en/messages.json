@@ -1,0 +1,76 @@
+{
+  "app_name": {
+    "message": "Ornithomedia reader",
+    "description": "The title of the application"
+  },
+
+  "app_desc": {
+    "message": "Change the way to display the articles on ornithomedia.com",
+    "description": "The description of the application, displayed in the web"
+  },
+
+  "content_description": {
+    "message": "Please reload the page when you update your parameters.",
+    "description": "Little text who explain what to do after the modifications of the parameters"
+  },
+
+  "right_panel": {
+    "message": "Right panel",
+    "description": "Label for the configuration form"
+  },
+
+  "nav_bar": {
+    "message": "Navigation bar",
+    "description": "Label for the configuration form"
+  },
+
+  "translate_toolbar": {
+    "message": "Translate toolbar",
+    "description": "Label for the configuration form"
+  },
+
+  "menu": {
+    "message": "Menu",
+    "description": "Label for the configuration form"
+  },
+
+  "breadcrumb": {
+    "message": "Breadcrumb",
+    "description": "Label for the configuration form"
+  },
+
+  "article_type": {
+    "message": "Article type",
+    "description": "Label for the configuration form"
+  },
+
+  "header": {
+    "message": "Header",
+    "description": "Label for the configuration form"
+  },
+
+  "social_toolbar": {
+    "message": "Social toolbar",
+    "description": "Label for the configuration form"
+  },
+
+  "comments": {
+    "message": "Comments",
+    "description": "Label for the configuration form"
+  },
+
+  "donations": {
+    "message": "Donations",
+    "description": "Label for the configuration form"
+  },
+
+  "first_footer": {
+    "message": "First footer",
+    "description": "Label for the configuration form"
+  },
+
+  "second_footer": {
+    "message": "Second footer",
+    "description": "Label for the configuration form"
+  }
+}
