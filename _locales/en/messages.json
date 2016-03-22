@@ -10,7 +10,7 @@
   },
 
   "content_description": {
-    "message": "Please reload the page when you update your parameters.",
+    "message": "Please refresh the page of the article you want to read after changing the settings.",
     "description": "Little text who explain what to do after the modifications of the parameters"
   },
 
