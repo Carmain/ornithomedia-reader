@@ -1,0 +1,65 @@
+{
+  "app_name": {
+    "message": "Ornithomedia reader"
+  },
+
+  "app_desc": {
+    "message": "Modifie la façon dont s'affiche les articles sur ornithomedia.com"
+  },
+
+  "content_description": {
+    "message": "Merci de recharger la page à chaque modification de vos paramètres."
+  },
+
+  "right_panel": {
+    "message": "Panel de droite"
+  },
+
+  "nav_bar": {
+    "message": "Barre de navigation"
+  },
+
+  "translate_toolbar": {
+    "message": "Barre de traduction"
+  },
+
+  "menu": {
+    "message": "Menu"
+  },
+
+  "breadcrumb": {
+    "message": "Fil d'ariane"
+  },
+
+  "article_type": {
+    "message": "Type de l'article"
+  },
+
+  "header": {
+    "message": "Entête"
+  },
+
+  "social_toolbar": {
+    "message": "Réseaux sociaux"
+  },
+
+  "comments": {
+    "message": "Commentaires"
+  },
+
+  "donations": {
+    "message": "Donations"
+  },
+
+  "first_footer": {
+    "message": "première partie du pied de page"
+  },
+
+  "second_footer": {
+    "message": "Seconde partie du pied de page"
+  },
+
+  "submit": {
+    "message": "Valider"
+  }
+}
