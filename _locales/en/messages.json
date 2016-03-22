@@ -72,5 +72,10 @@
   "second_footer": {
     "message": "Second footer",
     "description": "Label for the configuration form"
+  },
+
+  "submit": {
+    "message": "Submit",
+    "description": "Text for the submit button"
   }
 }
