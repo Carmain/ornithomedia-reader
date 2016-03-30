@@ -27,6 +27,12 @@
       config[itemsForm[i].id] = itemsForm[i].checked;
     }
 
+    chrome.tabs.query({url: "http://www.ornithomedia.com/*"}, function(tabs){
+      tabs.forEach(function(tab){
+        chrome.tabs.reload(tab.id);
+      });
+   });
+
     chrome.storage.sync.set(config);
   };
 
