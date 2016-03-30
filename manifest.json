@@ -18,7 +18,10 @@
 
   "content_scripts": [
     {
-      "matches": ["http://www.ornithomedia.com/*/*/*.html"],
+      "matches": [
+        "http://www.ornithomedia.com/*/*/*.html",
+        "http://www.ornithomedia.com/breves/*"
+      ],
       "js": ["js/clean.js"],
       "run_at": "document_end"
     }
