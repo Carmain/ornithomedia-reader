@@ -1,17 +1,18 @@
 //Localize by replacing __MSG_***__ meta tags
 (function localizeHtmlPage()
 {
-  var objects = document.getElementsByTagName('html');
-  for (var j = 0; j < objects.length; j++) {
-    var obj = objects[j];
+  var htmlElement = document.getElementsByTagName('html');
+  var replaceTags = function(match, tagName) {
+    return tagName ? chrome.i18n.getMessage(tagName) : "";
+  };
 
-    var valStrH = obj.innerHTML.toString();
-    var valNewH = valStrH.replace(/__MSG_(\w+)__/g, function(match, v1) {
-      return v1 ? chrome.i18n.getMessage(v1) : "";
-    });
+  for (var j = 0; j < htmlElement.length; j++) {
+    var htmlItem = htmlElement[j];
+    var htmlToString = htmlItem.innerHTML.toString();
+    var htmlUpdated = htmlToString.replace(/__MSG_(\w+)__/g, replaceTags);
 
-    if (valNewH != valStrH) {
-      obj.innerHTML = valNewH;
+    if (htmlUpdated != htmlToString) {
+      htmlItem.innerHTML = htmlUpdated;
     }
   }
 })();
