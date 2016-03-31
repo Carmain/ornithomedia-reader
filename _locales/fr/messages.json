@@ -7,10 +7,6 @@
     "message": "Modifie la façon dont s'affiche les articles sur ornithomedia.com"
   },
 
-  "content_description": {
-    "message": "Merci de rafraîchir la page de l'article que vous souhaitez lire après modification des paramètres."
-  },
-
   "right_panel": {
     "message": "Panel de droite"
   },

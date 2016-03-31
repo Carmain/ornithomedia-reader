@@ -9,11 +9,6 @@
     "description": "The description of the application, displayed in the web"
   },
 
-  "content_description": {
-    "message": "Please refresh the page of the article you want to read after changing the settings.",
-    "description": "Little text who explain what to do after the modifications of the parameters"
-  },
-
   "right_panel": {
     "message": "Right panel",
     "description": "Label for the configuration form"
