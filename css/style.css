@@ -1,24 +1,36 @@
 body {
-  width: 300px;
+  width: 340px;
+  color: #212121;
+  font-family: sans-serif;
 }
 
-h1 {
+.title {
   text-align: center;
-  color: #A66C00;
-}
-
-p {
-  font-style: italic;
-}
-
-label { /* TODO: Remove this at the end of the refactoring ! */
-  display: block;
-  margin-bottom: 5px;
-}
-
-button {
-  float: right;
+  color: #388E3C;
+  font-size: 1.5em;
+  padding: 20px 0;
   margin-bottom: 10px;
+}
+
+.button {
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px 5px 5px 5px;
+
+    cursor: pointer;
+}
+
+.button-right {
+  float: right;
+}
+
+.button-validation {
+    background-color: #4CAF50;
+    color: #FFFFFF;
 }
 
 /* Switch configuration */
@@ -26,11 +38,13 @@ button {
 .switch-box {
   display: flex;
   margin-bottom: 5px;
+  margin-right: 5px;
 }
 
 .label {
   flex: 1;
   margin-left: 10px;
+  font-size: 16px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -61,7 +75,7 @@ button {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: #BDBDBD;
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -73,17 +87,17 @@ button {
   width: 16px;
   left: 4px;
   bottom: 2px;
-  background-color: white;
+  background-color: #FFFFFF;
   -webkit-transition: .4s;
   transition: .4s;
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #8BC34A;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 1px #8BC34A;
 }
 
 input:checked + .slider:before {
