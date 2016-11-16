@@ -19,7 +19,7 @@
 
 (function init() {
   var itemsForm = document.querySelectorAll(".config");
-  var form = document.getElementById('configuration_form');
+  var form = document.getElementById('configuration-form');
 
   form.onsubmit = function() {
     var config = {};
