@@ -11,7 +11,7 @@ p {
   font-style: italic;
 }
 
-label {
+label { /* TODO: Remove this at the end of the refactoring ! */
   display: block;
   margin-bottom: 5px;
 }
@@ -25,12 +25,12 @@ button {
 
 .switch-box {
   display: flex;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .label {
   flex: 1;
-  margin-right: 20px;
+  margin-left: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -45,11 +45,11 @@ button {
 .switch {
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 34px;
-
+  width: 50px;
+  height: 20px;
 }
 
+/* Hide the checkbox */
 .switch input {
   display: none;
 }
@@ -69,10 +69,10 @@ button {
 .slider:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
+  height: 16px;
+  width: 16px;
   left: 4px;
-  bottom: 4px;
+  bottom: 2px;
   background-color: white;
   -webkit-transition: .4s;
   transition: .4s;
