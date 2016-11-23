@@ -7,7 +7,7 @@ chrome.runtime.onInstalled.addListener(function() {
     'menu': true,
     'breadcrumb': true,
     'article_type': true,
-    'header': true,
+    'header': false,
     'social_toolbar': true,
     'comments': true,
     'donations': true,

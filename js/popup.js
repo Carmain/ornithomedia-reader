@@ -3,7 +3,7 @@
 {
   var htmlElement = document.getElementsByTagName('html');
   var replaceTags = function(match, tagName) {
-    return tagName ? chrome.i18n.getMessage(tagName) : "";
+    return tagName ? chrome.i18n.getMessage(tagName) : '';
   };
 
   for (var j = 0; j < htmlElement.length; j++) {
@@ -18,7 +18,7 @@
 })();
 
 (function init() {
-  var itemsForm = document.querySelectorAll(".config");
+  var itemsForm = document.querySelectorAll('.config');
   var form = document.getElementById('configuration-form');
 
   form.onsubmit = function() {
@@ -28,7 +28,7 @@
       config[itemsForm[i].id] = itemsForm[i].checked;
     }
 
-    chrome.tabs.query({url: "http://www.ornithomedia.com/*"}, function(tabs){
+    chrome.tabs.query({url: 'http://www.ornithomedia.com/*'}, function(tabs){
       tabs.forEach(function(tab){
         chrome.tabs.reload(tab.id);
       });
