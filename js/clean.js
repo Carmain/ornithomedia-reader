@@ -15,11 +15,10 @@ var itemsToDelete = {
   "second_footer": "#piedpage"
 };
 
-// All the items we want to resize
-var itemsToResize = {
-  "column": "#colonne",
-  "content": ".fiche"
-};
+function resize(node) {
+  node.style.width = "100%";
+  node.style.fontSize = "13px";
+}
 
 var erase = function(data) {
   var key = Object.keys(data)[0];
@@ -28,11 +27,9 @@ var erase = function(data) {
     htmlElement.parentNode.removeChild(htmlElement);
 
     if(key === "right_panel") {
-      for (var item in itemsToResize) {
-        var itemToResize = document.querySelector(itemsToResize[item]);
-        itemToResize.style.width = "100%";
-        itemToResize.style.fontSize = "13px";
-      }
+      // All the items we want to resize
+      resize(document.querySelector("#colonne"));
+      resize(document.querySelector(".fiche"));
     }
   }
 };
